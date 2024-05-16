@@ -70,7 +70,7 @@ int counter = 1;
 
 Node *insert(Node *root, int key)
 {
-    printf("Steps: %d\n", counter++);
+    printf("\nSteps: %d\n", counter++);
 
     if (root == NULL)
     {
@@ -79,6 +79,7 @@ Node *insert(Node *root, int key)
         return newNode;
     }
 
+    printf("Root: %d\n", root->key);
     printf("Inserting: %d\n", key);
 
     if (key < root->key)
@@ -152,6 +153,7 @@ int main()
     root = insert(root, 20);
     root = insert(root, 30);
 
+    printf("\nFinal Tree:\n");
     printTree(root, "", true);
 
     return 0;
